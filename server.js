@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Conexión a MongoDB Atlas (La URL se maneja en variables de entorno para Render)
+// Conexión a MongoDB Atlas
 const mongoURI = process.env.MONGO_URI || 'mongodb://kta_user:<db_password>@ac-adscaen-shard-00-00.5lpd0cd.mongodb.net:27017,ac-adscaen-shard-00-01.5lpd0cd.mongodb.net:27017,ac-adscaen-shard-00-02.5lpd0cd.mongodb.net:27017/?ssl=true&replicaSet=atlas-ta0tkl-shard-0&authSource=admin&appName=Cluster0';
 mongoose.connect(mongoURI)
   .then(() => console.log('Conectado exitosamente a la Base de Datos'))
